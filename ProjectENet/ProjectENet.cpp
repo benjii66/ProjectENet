@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "ENet.h"
+#include "PacketData.h"
 #include <conio.h>
 
 int getch_noblock() {
@@ -12,9 +13,28 @@ int getch_noblock() {
         return -1;
 }
 
+void TestPacket()
+{
+    PacketData t;
+
+    t.SetStringContent("une chaine de test");
+    if (t.IsValid())
+    {
+        unsigned int taille = 0;
+        void* data = t.Serialize(taille);
+
+        PacketData t2;
+
+        t2.Deserialize(data, taille);
+
+        printf("%s",t2.GetContent());
+    }
+}
+
 
 int main_simple2()
 {
+    TestPacket();
     ENet* networkLayer = new ENet();
 
     if (!networkLayer->Initialize())

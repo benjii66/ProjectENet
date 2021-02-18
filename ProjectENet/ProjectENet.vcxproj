@@ -145,11 +145,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ClientInfo.cpp" />
     <ClCompile Include="ENet.cpp" />
+    <ClCompile Include="PacketData.cpp" />
+    <ClCompile Include="PacketDataJson.cpp" />
     <ClCompile Include="ProjectENet.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClientInfo.h" />
     <ClInclude Include="ENet.h" />
+    <ClInclude Include="PacketData.h" />
+    <ClInclude Include="PacketDataJson.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
