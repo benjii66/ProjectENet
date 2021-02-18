@@ -1,6 +1,8 @@
 #pragma once
 #include "PacketData.h"
 #include "json.hpp"
+using json::JSON;
+
 class PacketDataJson :
 	public PacketData
 {

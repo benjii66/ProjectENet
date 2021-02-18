@@ -87,6 +87,7 @@ void PacketData::Deserialize(void* _data, int _size)
 	if (m_Type == Type::String)
 	{
 		// then read the content according to the packet type
+
 		char* contentStr = static_cast<char*>(_data);
 		m_Content = contentStr;
 
