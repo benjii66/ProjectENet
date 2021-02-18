@@ -55,7 +55,7 @@ void* PacketDataJson::Serialize(unsigned int& _size)
 
 	JSON obj = JSON::Load(m_JSonContent);
 	m_JSonContent = obj.ToString();
-
+	//obj.size();
 	_size = sizeof(Type) + m_JSonContent.length() + 1;
 
 	m_JSonData = malloc(_size);
